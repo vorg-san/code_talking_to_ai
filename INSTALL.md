@@ -109,7 +109,7 @@ cp .env.example .env
 ```
 
 Edit `.env` to customize:
-- Command words (wake word, clear, go code it, stop, exit)
+- Command words (wake word, clear, go, stop, exit)
 - Whisper model (tiny, base, small, medium, large, turbo)
 - Audio processing settings
 - Advanced options

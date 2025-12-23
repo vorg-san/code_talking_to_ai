@@ -58,7 +58,7 @@ class CursorTranscriber:
         if not text:
             return False
 
-        # Always allow command words (go code it, stop, bob, zip, exit)
+        # Always allow command words (go, stop, bob, zip, exit)
         text_lower = text.lower().strip()
         command_words = [WAKE_WORD, STOP_WORD, CLEAR_WORD, SEND_WORD, QUIT_WORD]
         if any(cmd in text_lower for cmd in command_words):
@@ -181,10 +181,8 @@ class CursorTranscriber:
         text_lower = text.lower().strip()
         # Remove punctuation and split into words
         words_clean = re.sub(r"[^\w\s]", "", text_lower).split()
-        send_words = SEND_WORD.lower().split()
-        # Check if all words of the send command are present in the text (ignoring punctuation)
-        # Allow up to 5 total words (to account for extra words)
-        return len(words_clean) <= 5 and all(word in words_clean for word in send_words)
+        # Check if it's just "go" or a short phrase with "go" (ignoring punctuation)
+        return len(words_clean) <= 3 and SEND_WORD.lower() in words_clean
 
     def send_enter(self):
         """Press Enter key"""

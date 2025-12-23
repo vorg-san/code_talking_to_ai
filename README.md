@@ -123,7 +123,7 @@ The program will display all available commands on startup. Default commands:
 1. **Start the script** - It begins listening for the wake word
 2. **Say the wake word** (default: "Bob") - This activates transcription mode
 3. **Speak your message** - Your speech is transcribed and typed into the focused window
-4. **Say "go code it"** - Presses Enter to send/submit
+4. **Say "go"** - Presses Enter to send/submit
 5. **Say "stop"** - Returns to listening mode for the wake word
 6. **Say "exit"** - Shuts down the program
 
@@ -135,7 +135,7 @@ Available commands:
   • Bob: Start recording/transcription
   • Stop: Stop recording (only when recording)
   • Zip: Clear all text in focused window (only when not recording)
-  • Go code it: Send Enter key (only when recording)
+  • Go: Send Enter key (only when recording)
   • Exit: Shut down the program
 
 [You say: "Bob"]
@@ -144,7 +144,7 @@ Available commands:
 [You say: "Hello world how are you"]
 📝 Hello world how are you
 
-[You say: "go code it"]
+[You say: "go"]
 📤 Sending Enter...
 
 [You say: "stop"]
@@ -160,7 +160,7 @@ All settings can be configured via the `.env` file. Copy `.env.example` to `.env
 ```env
 WAKE_WORD=bob          # Word to start recording
 CLEAR_WORD=zip         # Word to clear text (when not recording)
-SEND_WORD="go code it" # Phrase to send Enter (when recording)
+SEND_WORD=go           # Word to send Enter (when recording)
 STOP_WORD=stop         # Word to stop recording
 QUIT_WORD=exit         # Word to exit the program
 ```

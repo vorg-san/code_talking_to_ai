@@ -13,7 +13,7 @@ load_dotenv()
 # Command words - can be overridden via environment variables
 WAKE_WORD = os.getenv("WAKE_WORD", "bob")
 CLEAR_WORD = os.getenv("CLEAR_WORD", "zip")
-SEND_WORD = os.getenv("SEND_WORD", "go code it")
+SEND_WORD = os.getenv("SEND_WORD", "go")
 STOP_WORD = os.getenv("STOP_WORD", "stop")
 QUIT_WORD = os.getenv("QUIT_WORD", "exit")
 
